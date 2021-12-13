@@ -7033,13 +7033,30 @@
 											"height": 13,
 											"text": "+GetGroup(id: int): Task<IActionResult<List<Group>>>",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF9s9y28PwzSdI=",
+											"_parent": {
+												"$ref": "AAAAAAF9qtyiJ6VNUrI="
+											},
+											"model": {
+												"$ref": "AAAAAAF9s9y21/wt/5M="
+											},
+											"font": "Arial;13;0",
+											"left": 1565,
+											"top": 1877,
+											"width": 597.212890625,
+											"height": 13,
+											"text": "+GetUserGroups(): Task<IActionResult<List<Group>>>",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1560,
 									"top": 1707,
 									"width": 607.212890625,
-									"height": 173
+									"height": 188
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -7079,7 +7096,7 @@
 							"left": 1560,
 							"top": 1672,
 							"width": 607.212890625,
-							"height": 208,
+							"height": 223,
 							"nameCompartment": {
 								"$ref": "AAAAAAF9qtyiJqVHa30="
 							},
@@ -7808,6 +7825,23 @@
 										},
 										{
 											"_type": "UMLOperationView",
+											"_id": "AAAAAAF9s8xW3JU4bp4=",
+											"_parent": {
+												"$ref": "AAAAAAF9qwVUgLkQjpU="
+											},
+											"model": {
+												"$ref": "AAAAAAF9s8xWu5UyrBE="
+											},
+											"font": "Arial;13;0",
+											"left": 1429,
+											"top": 855,
+											"width": 699.841796875,
+											"height": 13,
+											"text": "+GetLoggedUserData(): Task<IActionResult<UserDTO>",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
 											"_id": "AAAAAAF9rxvSOEqAITE=",
 											"_parent": {
 												"$ref": "AAAAAAF9qwVUgLkQjpU="
@@ -7817,27 +7851,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1429,
-											"top": 855,
-											"width": 699.841796875,
-											"height": 13,
-											"text": "+GetFeed(): Task<IActionResult<List<Post>>>",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAF9s6w/I0RY8Zg=",
-											"_parent": {
-												"$ref": "AAAAAAF9qwVUgLkQjpU="
-											},
-											"model": {
-												"$ref": "AAAAAAF9s6w/CERShFU="
-											},
-											"font": "Arial;13;0",
-											"left": 1429,
 											"top": 870,
 											"width": 699.841796875,
 											"height": 13,
-											"text": "+GetUserGroups(): Task<IActionResult<List<Group>>>",
+											"text": "+GetFeed(pageSize: int, page: int): Task<IActionResult<List<Post>>>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -10854,7 +10871,7 @@
 							"tail": {
 								"$ref": "AAAAAAF9qtyiJqVG35U="
 							},
-							"points": "2092:1879;2092:1920;2184:1920;2184:1952",
+							"points": "2092:1894;2092:1920;2184:1920;2184:1952",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF9sEI/PSSZH8E="
@@ -23141,6 +23158,25 @@
 									"direction": "return"
 								}
 							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF9s9y21/wt/5M=",
+							"_parent": {
+								"$ref": "AAAAAAF9qtyiJaVEy54="
+							},
+							"name": "GetUserGroups",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF9s9zFB/7IOCI=",
+									"_parent": {
+										"$ref": "AAAAAAF9s9y21/wt/5M="
+									},
+									"type": "Task<IActionResult<List<Group>>>",
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -23684,6 +23720,25 @@
 						},
 						{
 							"_type": "UMLOperation",
+							"_id": "AAAAAAF9s8xWu5UyrBE=",
+							"_parent": {
+								"$ref": "AAAAAAF9qwVUfrkHqp8="
+							},
+							"name": "GetLoggedUserData",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF9s8ymNZcZVwU=",
+									"_parent": {
+										"$ref": "AAAAAAF9s8xWu5UyrBE="
+									},
+									"type": "Task<IActionResult<UserDTO>",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
 							"_id": "AAAAAAF9rxvSIUp6PQ8=",
 							"_parent": {
 								"$ref": "AAAAAAF9qwVUfrkHqp8="
@@ -23698,25 +23753,24 @@
 									},
 									"type": "Task<IActionResult<List<Post>>>",
 									"direction": "return"
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF9s6w/CERShFU=",
-							"_parent": {
-								"$ref": "AAAAAAF9qwVUfrkHqp8="
-							},
-							"name": "GetUserGroups",
-							"parameters": [
+								},
 								{
 									"_type": "UMLParameter",
-									"_id": "AAAAAAF9s6x0pUY51w8=",
+									"_id": "AAAAAAF9s86EsLXVb78=",
 									"_parent": {
-										"$ref": "AAAAAAF9s6w/CERShFU="
+										"$ref": "AAAAAAF9rxvSIUp6PQ8="
 									},
-									"type": "Task<IActionResult<List<Group>>>",
-									"direction": "return"
+									"name": "pageSize",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF9s86EsLXWDKo=",
+									"_parent": {
+										"$ref": "AAAAAAF9rxvSIUp6PQ8="
+									},
+									"name": "page",
+									"type": "int"
 								}
 							]
 						},
