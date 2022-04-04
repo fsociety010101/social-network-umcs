@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  frontend:
+    build: 
+      context: .
+      dockerfile: SocialNetwork.Frontend/Dockerfile.Frontend
+    ports:
+      - "8001:80"
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge

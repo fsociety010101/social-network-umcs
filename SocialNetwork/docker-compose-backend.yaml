@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: social-network
+    ports: 
+      - "3307:3306"
+    volumes:
+      - ./db/db.sql:/docker-entrypoint-initdb.d/db.sql
+    networks:
+      - network
+
+  api:
+    depends_on:
+      - db
+    build: 
+      context: .
+      dockerfile: Dockerfile.Backend
+    environment:
+      Logging__Console__FormatterName: ""
+      ASPNETCORE_ENVIRONMENT: "Production"
+    ports:
+      - "8000:80"
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge
